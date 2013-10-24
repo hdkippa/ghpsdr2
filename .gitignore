@@ -1,0 +1,16 @@
+*.[oa]
+*.sw*
+.ghpsdr*
+autom4te.cache
+m4
+aclocal.m4
+config.in
+Makefile.in
+ltmain.sh
+config.guess
+config.sub
+configure
+depcomp
+install-sh
+missing
+

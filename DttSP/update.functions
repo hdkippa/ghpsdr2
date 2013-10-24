@@ -1,0 +1,155 @@
+Setup_SDR (char *app_data_path)
+Destroy_SDR ()
+
+SetThreadNo(unsigned int setit)
+SetThreadCom(unsigned int thread
+SetThreadProcessingMode(unsigned int thread, RUNMODE runmode)
+
+SetMode (unsigned int thread, unsigned int subrx, SDRMODE m)
+
+AudioReset (void)
+
+SetRXDCBlock(unsigned int thread, unsigned int subrx, BOOLEAN setit)
+SetRXDCBlockGain(unsigned int thread, unsigned int subrx, REAL gain)
+
+SetTXDCBlock (unsigned int thread, BOOLEAN setit)
+SetTXFMDeviation(unsigned int thread, double deviation)
+SetTXFilter (unsigned int thread, double low_frequency, double high_frequency)
+
+SetRXFilter (unsigned int thread, unsigned int subrx, double low_frequency, double high_frequency)
+
+Release_Update ()
+
+SetRXOutputGain(unsigned int thread, unsigned int subrx, double g)
+
+SetOscPhase(double phase)
+
+SetRXOsc (unsigned int thread, unsigned subrx, double newfreq)
+SetTXOsc (unsigned int thread, double newfreq)
+
+SetSampleRate (double newSampleRate)
+
+SetNR (unsigned int thread, unsigned subrx, BOOLEAN setit)
+SetNRvals (unsigned int thread, unsigned subrx, int taps, int delay, double gain, double leakage)
+
+SetTXCompandSt (unsigned int thread, BOOLEAN setit)
+SetTXCompand (unsigned int thread, double setit)
+
+SetTXSquelchSt (unsigned int thread, BOOLEAN setit)
+SetTXSquelchVal (unsigned int thread, float setit)
+SetTXSquelchAtt (unsigned int thread, float setit)
+
+SetANF (unsigned int thread, unsigned subrx, BOOLEAN setit)
+SetANFvals (unsigned int thread, unsigned subrx, int taps, int delay, double gain, double leakage)
+
+SetNB (unsigned int thread, unsigned subrx, BOOLEAN setit)
+SetNBvals (unsigned int thread, unsigned subrx, double threshold)
+
+SetSDROM (unsigned int thread, unsigned subrx, BOOLEAN setit)
+SetSDROMvals (unsigned int thread, unsigned subrx, double threshold)
+SetBIN (unsigned int thread, unsigned subrx, BOOLEAN setit)
+
+SetRXAGC (unsigned int thread, unsigned subrx, AGCMODE setit)
+SetRXAGCAttack (unsigned int thread, unsigned subrx, int attack)
+SetRXAGCDecay (unsigned int thread, unsigned subrx, int decay)
+SetRXAGCHang (unsigned int thread, unsigned subrx, int hang)
+SetRXAGCSlope (unsigned int thread, unsigned subrx, int slope)
+SetRXAGCHangThreshold (unsigned int thread, unsigned subrx, int hangthreshold)
+
+SetTXAMCarrierLevel (unsigned int thread, double setit)
+
+SetTXALCAttack (unsigned int thread, int attack)
+SetTXALCDecay (unsigned int thread, int decay)
+SetTXALCBot (unsigned int thread, double max_agc)
+SetTXALCHang (unsigned int thread, int decay)
+
+SetTXLevelerSt (unsigned int thread, BOOLEAN state)
+SetTXLevelerAttack (unsigned int thread, int attack)
+SetTXLevelerDecay (unsigned int thread, int decay)
+SetTXLevelerHang (unsigned int thread, int decay)
+SetTXLevelerTop (unsigned int thread, double maxgain)
+
+SetFixedAGC (unsigned int thread, unsigned int subrx, double fixed_agc)
+SetRXAGCTop (unsigned int thread, unsigned int subrx, double max_agc)
+
+GetSAMPLLvals(int thread, int subrx, REAL *alpha, REAL *beta)
+SetSAMPLLvals(int thread, int subrx, REAL alpha, REAL beta)
+GetSAMFreq(int thread, int subrx, REAL *freq)
+
+SetCorrectIQ (unsigned int thread, unsigned int subrx, double phase, double gain)
+SetCorrectIQGain (unsigned int thread, unsigned int subrx, double gain)
+SetCorrectIQPhase (unsigned int thread, unsigned int subrx, double phase)
+SetCorrectIQEnable(int setit)
+SetCorrectRXIQMu (unsigned int thread, unsigned int subrx, double mu)
+SetCorrectWBIRState(unsigned int thread,WBIR_STATE wbir)
+GetCorrectRXIQMu(unsigned int thread, unsigned int subrx)
+SetCorrectRXIQw (unsigned int thread, unsigned int subrx, REAL wr, REAL wi, unsigned int index)
+GetCorrectRXIQw(int thread, int subrx, REAL *realw, REAL *imagw, unsigned int index)
+SetCorrectRXIQwReal (unsigned int thread, unsigned int subrx, REAL wr, unsigned int index)
+SetCorrectRXIQwImag (unsigned int thread, unsigned int subrx, REAL wi, unsigned int index)
+SetCorrectTXIQ (unsigned int thread, double phase, double gain)
+SetCorrectTXIQGain (unsigned int thread, double gain)
+SetCorrectTXIQPhase (unsigned int thread, double phase)
+SetCorrectTXIQMu (unsigned int thread, double mu)
+SetCorrectTXIQW (unsigned int thread, double wr, double wi)
+
+SetPWSmode (unsigned thread, unsigned subrx, int setit)
+
+SetWindow (unsigned int thread, Windowtype window)
+
+SetSpectrumPolyphase (unsigned int thread, BOOLEAN setit)
+
+SetGrphTXEQ (unsigned int thread, int *txeq)
+SetGrphTXEQ10(unsigned int thread, int *txeq) 
+SetGrphTXEQcmd (unsigned int thread, BOOLEAN state)
+
+SetNotch160 (unsigned int thread, BOOLEAN state)
+
+SetGrphRXEQ (unsigned int thread, unsigned int subrx, int *rxeq)
+SetGrphRXEQ10(unsigned int thread, unsigned int subrx, int *rxeq) 
+SetGrphRXEQcmd (unsigned int thread, unsigned int subrx,BOOLEAN state)
+
+SetTXAGCFF (unsigned int thread, BOOLEAN setit)
+SetTXAGCFFCompression (unsigned int thread, double txcompression)
+
+SetSquelchVal (unsigned int thread, unsigned int subrx, float setit)
+SetSquelchState (unsigned int thread, unsigned int subrx,BOOLEAN setit)
+
+SetTRX (unsigned int thread, TRXMODE setit)
+
+FlushAllBufs (unsigned int thread, BOOLEAN trx)
+
+SetDSPBuflen (unsigned int thread, int newBuffSize)
+
+SetAudioSize (unsigned int size)
+
+SetTXAGCLimit (unsigned int thread, double limit)
+SetTXAGCCompression (unsigned int thread, double txcompression)
+
+Process_ComplexSpectrum (unsigned int thread, float *results)
+Process_Spectrum (unsigned int thread, float *results)
+Process_Panadapter (unsigned int thread, float *results)
+Process_Phase (unsigned int thread, float *results, int numpoints)
+Process_Scope (unsigned int thread, float *results, int numpoints)
+
+SetRingBufferOffset(unsigned int thread, int offset)
+
+CalculateRXMeter (unsigned int thread, unsigned int subrx, METERTYPE mt)
+CalculateTXMeter (unsigned int thread, METERTYPE mt)
+
+NewResampler (int samplerate_in, int samplerate_out)
+DoResampler (COMPLEX * input, COMPLEX * output, int numsamps, int *outsamps,
+
+DelPolyPhaseFIR (ResSt resst)
+NewResamplerF (int samplerate_in, int samplerate_out)
+DoResamplerF (float *input, float *output, int numsamps, int *outsamps, ResStF ptr)
+DelPolyPhaseFIRF (ResSt resst)
+
+SetSubRXSt(unsigned int thread, unsigned int subrx, BOOLEAN setit)
+
+SetRXPan(unsigned int thread, unsigned int subrx, float pos)
+
+SetDiversity (int setit)
+SetDiversityScalar(REAL re, REAL im)
+SetDiversityGain(REAL gain)
+
